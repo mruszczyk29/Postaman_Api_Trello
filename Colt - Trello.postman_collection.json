@@ -24,7 +24,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -215,7 +215,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -493,6 +493,51 @@
 					"name": "Test pobierania stworzonych tablic.",
 					"item": [
 						{
+							"name": "Aktualnie zalogowany użytkownik",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json();\r",
+											"pm.collectionVariables.set(\"me_id\", jsonData.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/1/members/me?token={{token}}&key={{key}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"1",
+										"members",
+										"me"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{token}}"
+										},
+										{
+											"key": "key",
+											"value": "{{key}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Pobieranie tablic",
 							"event": [
 								{
@@ -563,7 +608,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -756,7 +801,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -851,7 +896,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -995,7 +1040,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -1090,7 +1135,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -1330,7 +1375,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -1425,7 +1470,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -1625,7 +1670,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -1720,7 +1765,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -1983,7 +2028,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -2078,7 +2123,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -2275,7 +2320,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -2370,7 +2415,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -2614,7 +2659,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -2709,7 +2754,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -2801,7 +2846,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_card_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_card_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -3013,7 +3058,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_board_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_board_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -3108,7 +3153,7 @@
 											"});\r",
 											"\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_list_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_list_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -3199,7 +3244,7 @@
 											"    pm.response.to.have.status(200);\r",
 											"});\r",
 											"var jsonData = pm.response.json();\r",
-											"pm.environment.set(\"new_card_id\", jsonData.id);"
+											"pm.collectionVariables.set(\"new_card_id\", jsonData.id);"
 										],
 										"type": "text/javascript"
 									}
@@ -3358,6 +3403,39 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://api.trello.com/",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "your_token",
+			"type": "string"
+		},
+		{
+			"key": "key",
+			"value": "your_key",
+			"type": "string"
+		},
+		{
+			"key": "new_board_id",
+			"value": ""
+		},
+		{
+			"key": "new_list_id",
+			"value": ""
+		},
+		{
+			"key": "new_card_id",
+			"value": ""
+		},
+		{
+			"key": "me_id",
+			"value": ""
 		}
 	]
 }
