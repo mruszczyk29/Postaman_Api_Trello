@@ -1,6 +1,6 @@
 # API Trello
 
-Celem przeprowadzenia testów API Trello, opisanego w zakresie, jest weryfikacja poprawności działania interfejsu oprogramowania aplikacji Trello. Testy mają na celu sprawdzenie, czy API Trello działa zgodnie z oczekiwaniami i pozwala na realizację podstawowych funkcjonalności, takich jak tworzenie i modyfikowanie tablic, list i kart.
+Celem przeprowadzenia testów na podstawie dokumentacji API Trello jest weryfikacja poprawności działania interfejsu oprogramowania aplikacji Trello. Testy mają na celu sprawdzenie, czy API Trello działa zgodnie z oczekiwaniami i pozwala na realizację podstawowych funkcjonalności, takich jak tworzenie i modyfikowanie tablic, list i kart.
 
 Konkretne cele poszczególnych testów to:
 
