@@ -28,3 +28,13 @@ Konkretne cele poszczególnych testów to:
 * Kliknij nazwę kolekcji, która się pojawiła i przejdź do zakładki **"Variables"**.
 * Zmień wartości zmiennych o nazwie "token" oraz "key" na wygenerowane wcześniej wartości **API KEY** oraz **TOKEN** w polach Initial value oraz Current value.
 * Kliknij prawym przyciskiem myszy na nazwę kolekcji i wybierz opcję "Run collection".
+
+# Wyniki z testu tworzenia oraz usuwania tablicy
+
+Poniżej pokazuję metody, które zastosowałem do stworzenia oraz usunięcia tablicy w aplikacji Trello.
+![trellometody](https://imgur.com/prwhEVk)
+
+Następnie po kliknięciu w "Run Colt - Trello" otrzymujemy następujące wyniki. 
+![trellometody2](https://imgur.com/qfD2QjE)
+
+Jak widać na powyższym zrzucie ekranu testy przeszły pomyślnie.
