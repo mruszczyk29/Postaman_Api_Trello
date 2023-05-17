@@ -32,9 +32,9 @@ Konkretne cele poszczególnych testów to:
 # Wyniki z testu tworzenia oraz usuwania tablicy
 
 Poniżej pokazuję metody, które zastosowałem do stworzenia oraz usunięcia tablicy w aplikacji Trello.
-![trellometody](https://imgur.com/prwhEVk)
+![trellometody](https://imgur.com/prwhEVk.png)
 
 Następnie po kliknięciu w "Run Colt - Trello" otrzymujemy następujące wyniki. 
-![trellometody2](https://imgur.com/qfD2QjE)
+![trellometody2](https://imgur.com/qfD2QjE.png)
 
 Jak widać na powyższym zrzucie ekranu testy przeszły pomyślnie.
