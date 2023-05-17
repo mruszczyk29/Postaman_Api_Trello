@@ -41,24 +41,28 @@ Jak widać na powyższym zrzucie ekranu testy przeszły pomyślnie.
 
 Rozbijając przypadek testowy na czynniki pierwsze chciałbym pokrótce objaśnić co się kryję w danych zapytaniach:
 
-* "Tworzenie tablicy":
+* Tworzenie tablicy:
+
   Metoda: POST
   Tworzy nową tablicę w Trello przy użyciu podanych parametrów (nazwa tablicy, klucz API, tokenu autoryzującego).
   Skrypt testowy sprawdza odpowiedź serwera czy status code jest równy 200, oznaczając, że tablica została pomyślnie utworzona.
   Następnie kolejny skrypt pobiera ID nowej tablicy do zmiennej kolekcji o nazwie "new_board_id", aby można go było wykorzystać w kolejnych zapytaniach.
   
-* "Potwierdzenie stworzenia tablicy":
+* Potwierdzenie stworzenia tablicy:
+
   Metoda: GET
   Pobiera szczegóły tablicy o podanym identyfikatorze (new_board_id) z Trello.
   Skrypt testowy sprawdza, czy odpowiedź zwraca kod stanu 200 OK, oznaczając, że tablica jest widoczna.
   
-* "Usuwanie tablicy":
+* Usuwanie tablicy:
+
   Metoda: DELETE
   Usuwa tablicę o podanym identyfikatorze (new_board_id) z Trello.
   Skrypt testowy sprawdza, czy odpowiedź zwraca kod stanu 200 OK, oznaczając, że tablica została pomyślnie usunięta.
   Dodatkowo, sprawdza, czy odpowiedź zawiera wartość "null" w body, co sugeruje, że tablica została usunięta.
   
-* "Potwierdzenie usunięcia tablicy":
+* Potwierdzenie usunięcia tablicy:
+
   Metoda: GET
   Pobiera szczegóły tablicy o podanym identyfikatorze (new_board_id) z Trello.
   Skrypt testowy sprawdza, czy odpowiedź zwraca kod stanu 404 Not Found, oznaczając, że tablica nie istnieje.
